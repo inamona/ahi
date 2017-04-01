@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AuthenticationService } from './_services/index';
 import { LoginComponent } from './login/index';
@@ -15,6 +16,7 @@ import { LoginComponent } from './login/index';
     LoginComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule,

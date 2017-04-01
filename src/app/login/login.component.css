@@ -1,0 +1,41 @@
+.login-form {
+  border: solid;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  font-family: monospace;
+  background: #ffcc33;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+  padding: 5px;
+}
+
+div.form-group {
+  padding: 4px;
+}
+
+input {
+  margin: 0 10px 0 0;
+  padding: 12px 45px;
+}
+
+label {
+  margin: 0 10px 0 0;
+  padding: inherit;
+}
+
+div.submit {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding: 15px 45px;
+}

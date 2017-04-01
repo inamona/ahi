@@ -5,12 +5,14 @@ import { AuthenticationService } from '../_services/index';
 
 @Component({
   moduleId: module.id,
-  templateUrl: 'login.component.html'
+  templateUrl: 'login.component.html',
+  styleUrls: ['login.component.css']
 })
 export class LoginComponent implements OnInit {
   model: any = {};
   loading = false;
   returnUrl: string;
+  title = 'Login';
 
   constructor(
     private route: ActivatedRoute,
