@@ -36,4 +36,4 @@ const adminRoutes: Routes = [
     RouterModule
   ]
 })
-export class AdminRoutingModule { }
+export class AdminRouterModule { }

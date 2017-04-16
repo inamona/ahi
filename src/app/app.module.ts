@@ -8,9 +8,9 @@ import { AppRouterModule }    from './app.router.module';
 
 import { AuthGuard }          from './services/auth-guard.service';
 import { AdminModule }        from './modules/admin/admin.module';
+import { ErrorModule }        from './modules/error/error.module';
 import { LoginComponent }     from './modules/login/login.component';
 import { LoginRouterModule }  from './modules/login/login.router.module';
-
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { LoginRouterModule }  from './modules/login/login.router.module';
     FormsModule,
     AdminModule,
     LoginRouterModule,
-    AppRouterModule
+    AppRouterModule,
+    ErrorModule
   ],
   bootstrap: [
     AppComponent
