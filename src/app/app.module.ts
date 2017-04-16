@@ -3,6 +3,7 @@ import { NgModule }           from '@angular/core';
 import { FormsModule }        from '@angular/forms';
 
 import { AppComponent }       from './app.component';
+import { AboutComponent }     from './about.component';
 import { AppRouterModule }    from './app.router.module';
 
 import { AuthGuard }          from './services/auth-guard.service';
@@ -14,6 +15,7 @@ import { LoginRouterModule }  from './modules/login/login.router.module';
 @NgModule({
   declarations: [
     AppComponent,
+    AboutComponent,
     LoginComponent
   ],
   imports: [
