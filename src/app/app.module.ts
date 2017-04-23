@@ -12,6 +12,7 @@ import { ErrorModule }        from './modules/error/error.module';
 import { LoginComponent }     from './modules/login/login.component';
 import { LoginRouterModule }  from './modules/login/login.router.module';
 import { BlogModule }         from './modules/blog/blog.module';
+import { ToyProblemsModule }  from './modules/toy-problems/toy-problems.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BlogModule }         from './modules/blog/blog.module';
     BrowserModule,
     FormsModule,
     BlogModule,
+    ToyProblemsModule,
     AdminModule,
     LoginRouterModule,
     AppRouterModule,
