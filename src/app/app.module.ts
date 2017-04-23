@@ -11,6 +11,7 @@ import { AdminModule }        from './modules/admin/admin.module';
 import { ErrorModule }        from './modules/error/error.module';
 import { LoginComponent }     from './modules/login/login.component';
 import { LoginRouterModule }  from './modules/login/login.router.module';
+import { BlogModule }         from './modules/blog/blog.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { LoginRouterModule }  from './modules/login/login.router.module';
   imports: [
     BrowserModule,
     FormsModule,
+    BlogModule,
     AdminModule,
     LoginRouterModule,
     AppRouterModule,
