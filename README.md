@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/inamona/ahi.svg?branch=cfEnableTravisCI)](https://travis-ci.org/inamona/ahi)
+
 # ahi
 
 ## Development server
