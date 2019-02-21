@@ -2,8 +2,38 @@
 <p>
   This is my guestbook! Let me know you stopped by.
 </p>
-<ul>
-  <li *ngFor="let guest of guests">
-    <span class="badge">{{guest.nickname}}</span>
-  </li>
-</ul>
+<form novalidate [formGroup]="guestForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Nickname:</label>
+    <input  type="text"
+    id="nicknameId"
+    placeholder="Nickname (required)"
+    required
+    minlength="3"
+    formControlName="nickname"  />
+  </div>
+  <div>
+    <span>
+      <span *ngIf="nickname.errors?.required" style="color:red">
+        Please enter a nickname.
+      </span>
+      <span *ngIf="nickname.errors?.minlength" style="color:red">
+        The nickname must be longer than 3 characters.
+      </span>
+    </span>
+  </div>
+  <div>
+    <button type="submit"
+            style="width:80px"
+            [title]="guestForm.valid ? 'Save' : 'Disabled; inputs invalid'"
+            [disabled]="!guestForm.valid">Save
+    </button>
+  </div>
+</form>
+<div>
+  <ul>
+    <li *ngFor="let guest of guests">
+      <span class="badge">{{guest.nickname}}</span>
+    </li>
+  </ul>
+</div>

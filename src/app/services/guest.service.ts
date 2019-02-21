@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Guest } from 'app/modules/guestbook/guest';
+import { environment } from '../../environments/environment';
 import { of } from 'rxjs';
 import { Inject } from '@angular/core';
 
@@ -12,11 +13,10 @@ import { Inject } from '@angular/core';
 })
 export class GuestService {
 
-  private guestsUrl = "/api/guests";
+  private guestsUrl = '/api/guests/';
 
   constructor(
-    private http: HttpClient,
-    @Inject("window") private window: Window
+    private http: HttpClient
   ) { }
 
   /**
@@ -27,6 +27,15 @@ export class GuestService {
       tap(_ => console.log(`fetched guests`)),
       catchError(this.handleError('getGuests', []))
     );
+  }
+
+  /**
+   * Create a {@link Guest} using the nickname given.
+   */
+  createGuest(nickname: string): Observable<Guest> {
+    let body = new FormData();
+    body.append('nickname', nickname);
+    return this.http.post<Guest>(this.guestsUrl, body);
   }
 
   /**

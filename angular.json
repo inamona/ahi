@@ -53,6 +53,9 @@
           "configurations": {
             "production": {
               "browserTarget": "ahi:build:production"
+            },
+            "dev": {
+              "browserTarget": "ahi:build"
             }
           }
         },
