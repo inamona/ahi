@@ -1,6 +1,7 @@
 import { BrowserModule }      from '@angular/platform-browser';
 import { NgModule }           from '@angular/core';
-import { FormsModule }        from '@angular/forms';
+import { ReactiveFormsModule }        from '@angular/forms';
+import { HttpClientModule }   from '@angular/common/http';
 
 import { AppComponent }       from './app.component';
 import { AboutComponent }     from './about.component';
@@ -12,7 +13,7 @@ import { ErrorModule }        from './modules/error/error.module';
 import { LoginComponent }     from './modules/login/login.component';
 import { LoginRouterModule }  from './modules/login/login.router.module';
 import { BlogModule }         from './modules/blog/blog.module';
-import { ToyProblemsModule }  from './modules/toy-problems/toy-problems.module';
+import { GuestbookModule }    from './modules/guestbook/guestbook.module';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,14 @@ import { ToyProblemsModule }  from './modules/toy-problems/toy-problems.module';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    ReactiveFormsModule,
     BlogModule,
-    ToyProblemsModule,
+    GuestbookModule,
     AdminModule,
     LoginRouterModule,
     AppRouterModule,
-    ErrorModule
+    ErrorModule,
+    HttpClientModule
   ],
   bootstrap: [
     AppComponent

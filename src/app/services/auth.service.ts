@@ -4,9 +4,6 @@ import {of as observableOf,  Observable } from 'rxjs';
 import {tap, delay} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 
-
-
-
 @Injectable()
 export class AuthService {
   isLoggedIn: boolean = false;
